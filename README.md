@@ -3,7 +3,7 @@
 Repository for R code, summary statistic data and trained HLA models
 
 Submitted manuscript: 
-Ritari J, Hyvärinen K, Clancy J, FinnGen, Partanen J, Koskela S. _Increasing accuracy og HLA imputation by a population-specific reference panel in a Finngen biobank cohort._
+Ritari J, Hyvärinen K, Clancy J, FinnGen, Partanen J, Koskela S. _Increasing accuracy of HLA imputation by a population-specific reference panel in a Finngen biobank cohort._
 
 ## code (./src)
 `results.R` R code that generates the plots for figures 2-5
