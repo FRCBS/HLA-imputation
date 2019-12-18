@@ -3,7 +3,7 @@
 Repository for R code, summary statistic data and trained HLA models
 
 Submitted manuscript: 
-
+Ritari J, Hyvärinen K, Clancy J, FinnGen, Partanen J, Koskela S. Increasing accuracy og HLA imputation by a population-specific reference panel in a Finngen biobank cohort.
 
 ## code (./src)
 `results.R` R code that generates the plots for figures 2-5
@@ -14,6 +14,7 @@ Submitted manuscript:
 
 
 ## reference panels (./models)
-Trained models for hg19 and hg38 human genome builds
+Trained HLA imputation models for hg19 and hg38 human genome builds
 
 ## summary statistic data (./data)
+Contains imputation error rates, autoimmune association summaries and HLA allele frequency information
