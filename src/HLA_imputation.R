@@ -11,7 +11,7 @@ library(HIBAG)
 
 hlageno <- hlaBED2Geno(bed.fn="./data/MHC.bed", 
                        fam.fn="./data/MHC.fam", 
-                       bim.fn="./data/.bim", assembly='hg19')
+                       bim.fn="./data/MHC.bim", assembly='hg19')
 
 ## Load models
 
