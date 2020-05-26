@@ -2,7 +2,8 @@
 
 Repository for R code, summary statistic data and trained HLA models
 
- 
+
+Publication:
 Ritari J, Hyvärinen K, Clancy J, FinnGen, Partanen J, Koskela S. _Increasing accuracy of HLA imputation by a population-specific reference panel in a Finngen biobank cohort._ NAR Genomics and Bioinformatics, Volume 2, Issue 2, June 2020, lqaa030, https://doi.org/10.1093/nargab/lqaa030 
 
 
