@@ -1,0 +1,7 @@
+tmp/
+results/
+*Rproj
+.RData
+.RDataTmp
+.Rhistory
+.Rproj.user
