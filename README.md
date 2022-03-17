@@ -20,7 +20,7 @@ Ritari J, Hyvärinen K, Clancy J, FinnGen, Partanen J, Koskela S. _Increasing ac
 `R9_vcf_finalize.sh` shell script for combining and compressing VCFs
 
 ## reference panels (./models)
-Trained HLA imputation models for hg19 and hg38 human genome builds
+Trained HLA imputation models for hg19 and hg38 human genome builds.
 The models for DRB3-5 genes are in hg38 build only. The 'ng' in DRB3-5 is not an allele as such, but  indicates that the gene is missing.
 
 ## summary statistic data (./data)
