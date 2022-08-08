@@ -15,7 +15,7 @@ Ritari J, Hyvärinen K, Clancy J, FinnGen, Partanen J, Koskela S. _Increasing ac
 
 `HLA_imputation.R` example of running imputation with Finnish reference panel
 
-`FG_HLA_impute.R` R code for running HLA imputation for FinnGen R9, and result VCF file production
+`FG_HLA_impute.R` R code for running FinnGen HLA imputation and result BGEN file production
 
 
 ## reference panels (./models)
