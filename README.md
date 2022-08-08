@@ -15,9 +15,8 @@ Ritari J, Hyvärinen K, Clancy J, FinnGen, Partanen J, Koskela S. _Increasing ac
 
 `HLA_imputation.R` example of running imputation with Finnish reference panel
 
-`R9_HLA_impute.R` R code for running HLA imputation for FinnGen R9, and result VCF file production
+`FG_HLA_impute.R` R code for running HLA imputation for FinnGen R9, and result VCF file production
 
-`R9_vcf_finalize.sh` shell script for combining and compressing VCFs
 
 ## reference panels (./models)
 Trained HLA imputation models for hg19 and hg38 human genome builds
@@ -27,5 +26,5 @@ The models for DRB3-5 genes are in hg38 build only. The 'ng' in DRB3-5 is not an
 Contains imputation error rates, autoimmune association summaries and HLA allele frequency information
 
 ## FinnGen HLA imputation methods description
-MHC region SNPs were first converted to plink format (.bed, .bim, .fam) from VCF genotypes using [tabix](https://www.htslib.org/doc/tabix.html) and [plink](https://www.cog-genomics.org/plink/), and subequently processed with [R](https://www.r-project.org/). HLA alleles for HLA-A, -B, -C, -DPB1, -DQA1, -DQB1, -DRB1, and -DRB3-5 genes were imputed with the [HIBAG](https://bioconductor.org/packages/release/bioc/html/HIBAG.html) R library using a Finnish reference panel. Imputation posterior probabilities (pp) for each imputed allele were extracted from the HIBAG output by summing the pp values from all imputed HLA genotypes of which a given allele was a part of. The pp values were imported to plink using `--import-dosage` command and converted to VCF format with `--export vcf vcf-dosage=GP`. The allele dosage information is stored in the the VCF GP field.
+MHC region SNPs were first converted to plink format (.bed, .bim, .fam) from VCF genotypes using [tabix](https://www.htslib.org/doc/tabix.html) and [plink](https://www.cog-genomics.org/plink/), and subequently processed with [R](https://www.r-project.org/). HLA alleles for HLA-A, -B, -C, -DPB1, -DQA1, -DQB1, -DRB1, and -DRB3-5 genes were imputed with the [HIBAG](https://bioconductor.org/packages/release/bioc/html/HIBAG.html) R library using a Finnish reference panel. Imputation posterior probabilities (pp) for each imputed allele were extracted from the HIBAG output by summing the pp values from all imputed HLA genotypes of which a given allele was a part of. The pp values were imported to plink2 using `--import-dosage` command and converted to BGEN format with `--export bgen-1.2 bits=16 ref-first`.
 
