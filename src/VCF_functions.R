@@ -35,23 +35,24 @@ imputation2bgen <- function(i.data, hla.gene, outfile) {
   
   # plink dosage format
   out <- data.frame(SNP=out.alleles.list,
+                    POS=hla.genepos$start,
                     A1='<present>',
                     A2='<absent>',
                     out.alleles.pp)
   out$SNP <- paste0(hla.gene, '*', out$SNP)
   
   # fam file
-  tmp.map <- data.frame(colnames(out)[-c(1:3)], colnames(out)[-c(1:3)], 0, 0, 0, 0)
+  tmp.map <- data.frame(colnames(out)[-c(1:4)], colnames(out)[-c(1:4)], 0, 0, 0, 0)
   
   # sample IDs to dosage file
-  colnames(out)[-c(1:3)] <- paste(colnames(out)[-c(1:3)], colnames(out)[-c(1:3)]) 
+  colnames(out)[-c(1:4)] <- paste(colnames(out)[-c(1:4)], colnames(out)[-c(1:4)]) 
   
   # write to tmp
   fwrite(out, 'tmp/tmp.dosage', sep='\t')
   fwrite(tmp.map, 'tmp/tmp.dosage.map', sep='\t', col.names=F)
   
   # conversion to BGEN
-  system(paste0("plink2 --import-dosage tmp/tmp.dosage single-chr=6 ",
+  system(paste0("plink2 --import-dosage tmp/tmp.dosage single-chr=6 skip1=1 pos-col-num=2",
                 "--fam tmp/tmp.dosage.map --export bgen-1.2 bits=16 ref-first --out ", outfile))
   
 }
